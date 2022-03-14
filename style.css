@@ -1,0 +1,40 @@
+
+/* inizio regole generali */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.ms_d-flex{
+    display: flex;
+}
+
+.ms_align_items_center{
+    align-items: center;
+}
+
+
+/* fine regole generali */
+
+
+/* inizio regole header*/
+
+header{
+    height: 3rem;
+    background-color: #2e3a46;
+}
+
+.fab{
+    font-size: 2.5rem;
+    color: #1ed760;
+    margin-left: 1rem;
+}
+
+/*fine regole header*/
+
+main{
+    background-color: #1e2d3b;
+    height: calc(100vh - 3rem); /*main height: calc(100vh - height header)*/
+}
