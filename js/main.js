@@ -21,7 +21,6 @@ const app = new Vue({
             axios.get("http://localhost/php-ajax-dischi/src/server.php")
             .then(response => {
                 this.albums = response.data;
-                console.log(this.albums)
             })
             .catch(function (error) {
                 console.log(error);
