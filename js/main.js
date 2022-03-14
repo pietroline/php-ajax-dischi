@@ -4,7 +4,7 @@ const app = new Vue({
     
     el: '#app',
     data: {
-        albums: "",
+        albums: [],
     },
 
     mounted(){
@@ -19,7 +19,7 @@ const app = new Vue({
             
         
             axios.get("http://localhost/php-ajax-dischi/src/server.php")
-            .then(function (response) {
+            .then(response => {
                 this.albums = response.data;
                 console.log(this.albums)
             })
