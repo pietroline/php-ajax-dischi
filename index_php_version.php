@@ -39,18 +39,18 @@
 
                     <?php
                         foreach($database as $disco){
-                            echo "<div class='col'>";
-                                echo "<div class='album d-flex flex-column align-items-center'>";
-                                    echo "<div class='ms_w-90 pt-3'>";
-                                            echo  "<img src=$disco[poster] class='card-img-top' alt=img $disco[title]>";
-                                    echo "</div>";
-                                    echo "<div class='card-body text-center'>";
-                                        echo "<h4 class='card-title mb-4'>$disco[title]</h4>";
-                                        echo "<h6 class='text-secondary'>$disco[author]</h6>";
-                                        echo "<h6 class='text-secondary'>$disco[year]</h6>";
-                                    echo "</div>";
-                                echo "</div>";
-                            echo "</div>";
+                            echo "<div class='col'>".
+                                    "<div class='album d-flex flex-column align-items-center'>".
+                                        "<div class='ms_w-90 pt-3'>".
+                                            "<img src=$disco[poster] class='card-img-top' alt=img $disco[title]>".
+                                    "</div>".
+                                    "<div class='card-body text-center'>".
+                                        "<h4 class='card-title mb-4'>$disco[title]</h4>".
+                                        "<h6 class='text-secondary'>$disco[author]</h6>".
+                                        "<h6 class='text-secondary'>$disco[year]</h6>".
+                                    "</div>".
+                                "</div>".
+                            "</div>";
                         } 
                     ?>
                       
