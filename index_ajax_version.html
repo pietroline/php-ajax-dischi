@@ -31,11 +31,11 @@
                                 <select name="generi" v-model="genereSelezionato">
                                     <option value="">Scegli un genere</option>
                                     <option 
-                                        v-for="(album, index) in albums" 
+                                        v-for="(genre, index) in genres" 
                                         :key="index" 
-                                        :value="album.genre">
+                                        :value="genre">
                                         
-                                    {{album.genre}}</option>
+                                    {{genre}}</option>
                                 </select>
                             </form>
                         </div> 

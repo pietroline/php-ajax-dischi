@@ -15,19 +15,28 @@ const app = new Vue({
             })
             .catch(function (error) {
                 console.log(error);
-            })
+            })        
     },
 
     computed:{
         filtraAlbumsGenere(){
             if(this.genereSelezionato != ""){
-                console.log("test");
                 return this.albums.filter(album => album.genre == this.genereSelezionato);
                
             }else{
                 return this.albums;
             }
+        },
 
+        genres(){
+            let generi = [];
+            this.albums.forEach(album =>{
+                if(!generi.includes(album.genre)){
+                    generi.push(album.genre);
+                } 
+            });
+
+            return generi;
         }
     },
 })
