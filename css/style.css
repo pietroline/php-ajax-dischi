@@ -6,6 +6,10 @@
         box-sizing: border-box;
     }
 
+    [v-cloak] {
+        display: none;
+    }
+
     .ms_w-90{
         width: 90%;
     }
@@ -27,6 +31,10 @@
 /*inizio regole main*/
     main{
         background-color: #1e2d3b;
+    }
+    
+    main .container{
+        height: 100vh;
     }
 
     .album{

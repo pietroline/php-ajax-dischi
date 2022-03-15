@@ -19,43 +19,58 @@
 
     <body>
 
-        <header>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col">
-                        <i class="bi bi-spotify"></i>
-                    </div>    
+        <div id="app" v-cloak>
+            <header>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col">
+                            <i class="bi bi-spotify"></i>
+                        </div>   
+                        <div class="col align-self-center text-end pe-5">
+                            <form action="POST">
+                                <select name="generi" v-model="genereSelezionato">
+                                    <option value="">Scegli un genere</option>
+                                    <option 
+                                        v-for="(album, index) in albums" 
+                                        :key="index" 
+                                        :value="album.genre">
+                                        
+                                    {{album.genre}}</option>
+                                </select>
+                            </form>
+                        </div> 
+                    </div> 
                 </div>
-            </div>
-        </header>
-
-        <main id="app" class="p-5">
-            <div class="container">
-                <div class="row row-cols-2  row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
-
-                    
-                       
-                    <div class='col' v-for="(album, index) in albums" :key="index">
-                        <div class='album d-flex flex-column align-items-center'>
-                            <div class='ms_w-90 pt-3'>
-                                    <img :src="album.poster" class='card-img-top' alt="img titolo">
-                            </div>
-                            <div class='card-body text-center'>
-                                <h4 class='card-title mb-4'>{{album.title}}</h4>
-                                <h6 class='text-secondary'>{{album.author}}</h6>
-                                <h6 class='text-secondary'>{{album.year}}</h6>
+            </header>
+    
+            <main class="p-5">
+                <div class="container">
+                    <div class="row row-cols-2  row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+    
+                        
+                           
+                        <div class='col' v-for="(album, index) in filtraAlbumsGenere" :key="index">
+                            <div class='album d-flex flex-column align-items-center'>
+                                <div class='ms_w-90 pt-3'>
+                                        <img :src="album.poster" class='card-img-top' alt="img titolo">
+                                </div>
+                                <div class='card-body text-center'>
+                                    <h4 class='card-title mb-4'>{{album.title}}</h4>
+                                    <h6 class='text-secondary'>{{album.author}}</h6>
+                                    <h6 class='text-secondary'>{{album.year}}</h6>
+                                </div>
                             </div>
                         </div>
+                         
+                          
                     </div>
-                     
-                      
+                    
                 </div>
-                
-            </div>
-        </main>
-        
-
+            </main>
+            
+        </div>
        
+
         <!-- script cdn vue -->
         <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
         
